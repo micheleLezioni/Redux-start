@@ -1,19 +1,11 @@
 import { INCREMENT, DECREMENT } from "../../types"
 
-export default function (state = {}, action) {
+export default function (state = 0, action) {
     switch (action.type) {
         case INCREMENT:
-            return {
-                ...state,
-                counter: action.payload
-            };
+            return state + 1
         case DECREMENT:
-            //sxss
-            //ss
-            return {
-                ...state,
-                counter: state.counter - 1
-            };
+            return state - 1
         default:
             return state;
     }
